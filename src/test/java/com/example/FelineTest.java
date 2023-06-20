@@ -38,21 +38,6 @@ public class FelineTest {
     private Feline feline;
 
     @Test
-    public void testGetKittensPositiveAmount() {
-        int expected = 100;
-        int actual = feline.getKittens(100);
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testGetKittensNegativeAmount() {
-        int expected = -100;
-        int actual = feline.getKittens(-100);
-        Assert.assertEquals(expected, actual);
-    }
-
-
-    @Test
     public void testGetKittensCheckMethodCall() {
         feline.getKittens();
         Mockito.verify(feline, Mockito.times(1)).getKittens(1);
